@@ -14,6 +14,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
+    // Initialize variables
     @FXML
     private WebView webView;
 
@@ -33,8 +34,10 @@ public class HelloController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         engine = webView.getEngine();
+        // Set a default url to load when starting the browser
         homePage = "www.google.com";
         textField.setText(homePage);
+        // Initialize a default zoom of 1
         webZoom = 1;
         loadPage();
     }
